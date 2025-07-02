@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class ContaTerminal {
-        public static void main(String[] args) {
+       public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Alocando as informações individualmente
         System.out.println("Por favor, digite o número da Agência:");
         String agencia = scanner.nextLine();
 
@@ -16,19 +17,16 @@ public class ContaTerminal {
         System.out.println("Por favor, digite o saldo:");
         double saldo = scanner.nextDouble();
 
-        // Construindo a mensagem com concat()
-        String mensagem = "Olá ".concat(nomeCliente)
-            .concat(", obrigado por criar uma conta em nosso banco, sua agência é ")
-            .concat(agencia)
-            .concat(", conta ")
-            .concat(numeroConta)
-            .concat(" e seu saldo ")
-            .concat(String.valueOf(saldo))
-            .concat(" já está disponível para saque.");
+        // Construindo a mensagem final com +
+        String mensagem = "Olá " + nomeCliente + 
+            ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + 
+            ", conta " + numeroConta + 
+            " e seu saldo " + saldo + 
+            " já está disponível para saque.";
 
+        // Mostrando a mensagem
         System.out.println("\n" + mensagem);
 
         scanner.close();
     }
-}
 
